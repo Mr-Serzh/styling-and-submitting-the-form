@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Styling and submitting the form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" class="form__body">
+          <h1 class="form__title">Sending data to mail</h1>
+          <div class="form__item">
+            <label for="formName" class="form__label">Name*:</label>
+            <input id="formName" type="text" name="name" class="form__input _req" />
+          </div>
+          <div class="form__item">
+            <label for="formEmail" class="form__label">E-mail*:</label>
+            <input
+              id="formEmail"
+              type="text"
+              name="email"
+              class="form__input _req _email"
+            />
+          </div>
+          <div class="form__item">
+            <div class="form__label">Married?</div>
+            <div class="options">
+              <div class="options__item">
+                <input
+                  id="formMarriedYes"
+                  checked
+                  type="radio"
+                  name="married"
+                  value="yes"
+                  class="options__input"
+                />
+                <label for="formMarriedYes" class="options__label"
+                  >Yes</label
+                >
+              </div>
+              <div class="options__item">
+                <input
+                  id="formMarriedNo"
+                  type="radio"
+                  name="married"
+                  value="no"
+                  class="options__input"
+                />
+                <label for="formMarriedNo" class="options__label"
+                  >No</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="formMassage" class="form__label">Massage:</label>
+            <textarea
+              name="massage"
+              id="formMassage"
+              class="form__input"
+            ></textarea>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Age:</div>
+            <select name="age" class="select">
+              <option value="from 18 to 25" selected="selected">Young</option>
+              <option value="from 25 to 45">Old</option>
+              <option value="from 45">Superstar</option>
+            </select>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Add image</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  id="formImage"
+                  accept=".jpg, .png, .gif"
+                  type="file"
+                  name="image"
+                  class="file__input"
+                />
+                <button class="file__button">Select</button>
+              </div>
+              <div id="formPreview" class="file__preview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                id="formAgreement"
+                checked
+                type="checkbox"
+                name="agreement"
+                class="checkbox__input _req"
+              />
+              <label for="formAgreement" class="checkbox__label"
+                ><span
+                  >I give my consent to the processing of data in accordance
+                  with the <a href="">Terms and Conditions</a></span
+                ></label
+              >
+            </div>
+          </div>
+          <button type="submit" class="form__button">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>
